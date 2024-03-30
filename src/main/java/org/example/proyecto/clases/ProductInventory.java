@@ -5,13 +5,21 @@ import java.time.LocalDate;
 public class ProductInventory {
     private int productId;
     private int locationId;
-    private int shelf;
+    private String shelf;
     private int bin;
     private int quantity;
     private int rowguid;
     private LocalDate modifiedDate;
 
-    public ProductInventory(int productId, int locationId, int shelf, int bin, int quantity, int rowguid,
+    // variables aparte
+    private String nombreProducto;
+
+    public ProductInventory(int quantity, String nombreProducto) {
+        this.quantity = quantity;
+        this.nombreProducto = nombreProducto;
+    }
+
+    public ProductInventory(int productId, int locationId, String shelf, int bin, int quantity, int rowguid,
             LocalDate modifiedDate) {
         this.productId = productId;
         this.locationId = locationId;
@@ -38,11 +46,11 @@ public class ProductInventory {
         this.locationId = locationId;
     }
 
-    public int getShelf() {
+    public String getShelf() {
         return shelf;
     }
 
-    public void setShelf(int shelf) {
+    public void setShelf(String shelf) {
         this.shelf = shelf;
     }
 
@@ -78,4 +86,12 @@ public class ProductInventory {
         this.modifiedDate = modifiedDate;
     }
 
+    // variable aparte
+    public String getNombreProducto() {
+        return nombreProducto;
+    }
+
+    public void setNombreProducto(String nombreProducto) {
+        this.nombreProducto = nombreProducto;
+    }
 }

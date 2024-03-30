@@ -1,17 +1,19 @@
 package org.example.proyecto.clases;
 
+import java.time.LocalDate;
+
 public class productReview {
     private int productReviewId;
     private int productId;
-    private int reviewerName;
-    private int reviewDate;
-    private int emailAdress;
+    private String reviewerName;
+    private LocalDate reviewDate;
+    private String emailAdress;
     private int raiting;
-    private int coments;
-    private int modifiedDate;
+    private String coments;
+    private LocalDate modifiedDate;
 
-    public productReview(int productReviewId, int productId, int reviewerName, int reviewDate, int emailAdress,
-            int raiting, int coments, int modifiedDate) {
+    public productReview(int productReviewId, int productId, String reviewerName, LocalDate reviewDate,
+            String emailAdress, int raiting, String coments, LocalDate modifiedDate) {
         this.productReviewId = productReviewId;
         this.productId = productId;
         this.reviewerName = reviewerName;
@@ -38,27 +40,27 @@ public class productReview {
         this.productId = productId;
     }
 
-    public int getReviewerName() {
+    public String getReviewerName() {
         return reviewerName;
     }
 
-    public void setReviewerName(int reviewerName) {
+    public void setReviewerName(String reviewerName) {
         this.reviewerName = reviewerName;
     }
 
-    public int getReviewDate() {
+    public LocalDate getReviewDate() {
         return reviewDate;
     }
 
-    public void setReviewDate(int reviewDate) {
+    public void setReviewDate(LocalDate reviewDate) {
         this.reviewDate = reviewDate;
     }
 
-    public int getEmailAdress() {
+    public String getEmailAdress() {
         return emailAdress;
     }
 
-    public void setEmailAdress(int emailAdress) {
+    public void setEmailAdress(String emailAdress) {
         this.emailAdress = emailAdress;
     }
 
@@ -70,19 +72,19 @@ public class productReview {
         this.raiting = raiting;
     }
 
-    public int getComents() {
+    public String getComents() {
         return coments;
     }
 
-    public void setComents(int coments) {
+    public void setComents(String coments) {
         this.coments = coments;
     }
 
-    public int getModifiedDate() {
+    public LocalDate getModifiedDate() {
         return modifiedDate;
     }
 
-    public void setModifiedDate(int modifiedDate) {
+    public void setModifiedDate(LocalDate modifiedDate) {
         this.modifiedDate = modifiedDate;
     }
 

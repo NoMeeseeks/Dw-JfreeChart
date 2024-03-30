@@ -1,11 +1,10 @@
 package org.example;
 
-import org.example.example.vistas.GraficoBarrasPrueba;
+import org.example.proyecto.graficos.*;
 
 public class Main {
     public static void main(String[] args) {
-
-        // GraficoCircular ojbGraficoPrueba = new GraficoCircular();
-        GraficoBarrasPrueba objGraficoPruebaBarras = new GraficoBarrasPrueba();
+        // GraficoDeBarras graficoUno = new GraficoDeBarras();
+        // GraficoCircular graficoDos = new GraficoCircular();
     }
 }

@@ -2,19 +2,19 @@ package org.example.proyecto.clases;
 
 public class Time {
     private int timeId;
-    private String year;
-    private String quarter;
-    private String month;
-    private String hour;
-    private String minute;
-    private String second;
+    private int quarter;
+    private int month;
+    private int hour;
+    private int year;
+    private int minute;
+    private int second;
 
-    public Time(int timeId, String year, String quarter, String month, String hour, String minute, String second) {
+    public Time(int timeId, int quarter, int month, int hour, int year, int minute, int second) {
         this.timeId = timeId;
-        this.year = year;
         this.quarter = quarter;
         this.month = month;
         this.hour = hour;
+        this.year = year;
         this.minute = minute;
         this.second = second;
     }
@@ -27,51 +27,51 @@ public class Time {
         this.timeId = timeId;
     }
 
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
-    }
-
-    public String getQuarter() {
+    public int getQuarter() {
         return quarter;
     }
 
-    public void setQuarter(String quarter) {
+    public void setQuarter(int quarter) {
         this.quarter = quarter;
     }
 
-    public String getMonth() {
+    public int getMonth() {
         return month;
     }
 
-    public void setMonth(String month) {
+    public void setMonth(int month) {
         this.month = month;
     }
 
-    public String getHour() {
+    public int getHour() {
         return hour;
     }
 
-    public void setHour(String hour) {
+    public void setHour(int hour) {
         this.hour = hour;
     }
 
-    public String getMinute() {
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public int getMinute() {
         return minute;
     }
 
-    public void setMinute(String minute) {
+    public void setMinute(int minute) {
         this.minute = minute;
     }
 
-    public String getSecond() {
+    public int getSecond() {
         return second;
     }
 
-    public void setSecond(String second) {
+    public void setSecond(int second) {
         this.second = second;
     }
 
