@@ -1,8 +1,7 @@
 package org.example.example.vistas;
+
 import org.example.example.controller.usuariosController;
 import org.example.example.controller.usuariosXsueldo;
-import org.example.controller.pregunta1;
-import org.example.dao.primeraPreguntaDAO;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -18,8 +17,9 @@ import static java.lang.String.valueOf;
 
 public class GraficoBarrasPrueba extends JFrame {
     private JPanel pregunta = new JPanel();
-    public GraficoBarrasPrueba(){
-        //visualizacion del jframe
+
+    public GraficoBarrasPrueba() {
+        // visualizacion del jframe
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setSize(new Dimension(500, 500));
         this.setMinimumSize(new Dimension(400, 400));
@@ -47,12 +47,11 @@ public class GraficoBarrasPrueba extends JFrame {
         listaCantidadXSueldo.add(obj9);
 
         DefaultCategoryDataset datos = new DefaultCategoryDataset();
-            for(usuariosXsueldo datosLista: listaCantidadXSueldo){
-                datos.setValue(datosLista.getSueldo(),
-                        valueOf(datosLista.getCantidad()),
-                        valueOf(2));
-            }
-
+        for (usuariosXsueldo datosLista : listaCantidadXSueldo) {
+            datos.setValue(datosLista.getSueldo(),
+                    valueOf(datosLista.getCantidad()),
+                    valueOf(2));
+        }
 
         JFreeChart graficoBarras = ChartFactory.createBarChart(
                 "Sueldos X Usuarios",
@@ -62,15 +61,14 @@ public class GraficoBarrasPrueba extends JFrame {
                 PlotOrientation.VERTICAL,
                 true,
                 true,
-                false
-        );
-        ChartPanel panel=new ChartPanel(graficoBarras);
+                false);
+        ChartPanel panel = new ChartPanel(graficoBarras);
         panel.setMouseWheelEnabled(true);
-        panel.setPreferredSize(new Dimension(400,200));
+        panel.setPreferredSize(new Dimension(400, 200));
 
         pregunta.setLayout(new BorderLayout());
-        pregunta.setSize(new Dimension(500,500));
-        pregunta.add(panel,BorderLayout.NORTH);
+        pregunta.setSize(new Dimension(500, 500));
+        pregunta.add(panel, BorderLayout.NORTH);
         pack();
         repaint();
         this.add(pregunta);
